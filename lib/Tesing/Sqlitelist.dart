@@ -297,14 +297,6 @@ class _SqlitelistState extends State<Sqlitelist> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            'Active: ${_loginData.where((item) => item['is_active'] == 1).length}',
-                            style: TextStyle(
-                              color: Colors.green[300],
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
                         ],
                       ),
                     ),
@@ -372,6 +364,7 @@ class _SqlitelistState extends State<Sqlitelist> {
                                           'VM ID', item['vmid']?.toString()),
                                       _buildDetailRow('Login Date',
                                           _formatDate(item['login_date'])),
+                                      _buildDetailRow('IMEI', item['imei']),
                                     ],
                                   ),
                                 ),

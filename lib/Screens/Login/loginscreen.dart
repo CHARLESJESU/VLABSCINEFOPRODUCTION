@@ -55,7 +55,7 @@ class _LoginscreenState extends State<Loginscreen> {
               production_house TEXT,
               vmid INTEGER,
               login_date TEXT,
-         
+              imei TEXT
             )
           ''');
           print('✅ SQLite login_data table created successfully');
@@ -105,6 +105,7 @@ class _LoginscreenState extends State<Loginscreen> {
         'production_house': productionHouse ?? '',
         'vmid': vmid ?? 0,
         'login_date': DateTime.now().toIso8601String(),
+        'imei': _imei,
       };
 
       print('📝 Adding FIRST USER login data: $loginData');
